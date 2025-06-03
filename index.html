@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sustainbly helps you live a more eco-conscious life with expert guidance on waste management, forest preservation, and sustainable agriculture." />
+  <meta name="keywords" content="sustainable living, eco-friendly, environment, waste management, forest preservation, sustainable agriculture, Sustainbly" />
+  <meta name="author" content="Sustainbly" />
+  <title>Sustainbly - Sustainable Living Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #f2f6f0;
+      color: #1f3a2c;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #1f3a2c;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+    header h1 {
+      font-size: 1.8rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 3rem;
+      background-color: #e4ecd9;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .hero-text {
+      max-width: 45%;
+    }
+    .hero-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      margin-bottom: 1.5rem;
+    }
+    .hero img {
+      max-width: 45%;
+      border-radius: 10px;
+    }
+    .services {
+      padding: 3rem;
+      background-color: white;
+      text-align: center;
+    }
+    .services h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .service-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background-color: #f2f6f0;
+      border-radius: 10px;
+      padding: 1.5rem;
+      max-width: 250px;
+      text-align: left;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #1f3a2c;
+    color: white;
+    padding: 2rem;
+    gap: 2rem;
+    }
+    .footer-section {
+    flex: 1 1 250px;
+    min-width: 220px;
+    }
+    .footer-section h3,
+    .footer-section h4 {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #a3d7b1;
+    padding-bottom: 0.5rem;
+    }
+    .footer-section a {
+    display: block;
+    color: #d1e7d3;
+    text-decoration: none;
+    margin: 0.3rem 0;
+    transition: color 0.3s;
+    }
+    .footer-section a:hover {
+    color: #fff;
+    }
+    .button {
+        display: inline-block;
+        padding: 12px 28px;
+        background-color: #1f3a2c; /* green */
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        user-select: none;
+        margin-top: 20px;
+    }
+    .forest-section {
+    background: url('https://images.unsplash.com/photo-1503149779833-1de50ebe5f8a?q=80&w=2448&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+    background-size: cover;
+    padding: 4rem 2rem;
+    color: #ffffff;
+    }
+    .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+    .forest-img {
+    flex: 1 1 300px;
+    max-width: 350px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .forest-text {
+    flex: 1 1 500px;
+    max-width: 600px;
+    }
+    .forest-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    }
+    .feature h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #d6f5d6;
+    }
+    .feature p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #e2f3e2;
+    }
+    .btn-light {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #ffffff;
+    color: #1f3a2c;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    }
+    .btn-light:hover {
+    background-color: #d4eed4;
+    }
+    .cta {
+    position: relative;
+    background: linear-gradient(to right, #e8f5e9, #ffffff);
+    padding: 4rem 2rem;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sustainbly</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Build A Safe And Structured Environment</h2>
+            <p>Join Sustainbly in our mission to encourage sustainable living by offering guided waste management, a carbon footprint tracker, and eco-friendly products.</p>
+            <a href="#about" class="button">Learn</a>
+        </div>
+        <img src="static/images/leaves4.png" alt="Plant Growing">
+    </section>
+
+    <section class="forest-section" id="about">
+        <div class="content-wrapper">
+        
+            <div class="forest-text">
+                <h2>Foster a Safe and Sustainable Habitat</h2>
+
+                <div class="feature">
+                    <h4>🌿 Inspiring Sustainable Living, One Step at a Time</h4>
+                    <p>At Sustainbly, we believe that small, conscious actions can lead to a significant global impact. Our mission is to empower individuals and communities to live more sustainably by providing the tools, knowledge, and support needed to protect our planet.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>💧 Empowering Sustainable Living Through Practical Solutions for a Greener Tomorrow</h4>
+                    <p>We focus on practical solutions in waste management, forest restoration, and sustainable agriculture, helping people make eco-friendly choices in everyday life. By fostering a safe and sustainable habitat, we aim to preserve natural ecosystems, combat climate change, and ensure a healthier environment for future generations.</p>
+                </div>
+
+                <div class="feature">
+                    <p>Join us in building a world where sustainability is second nature.</p>
+                </div>
+
+                <a href="#services" class="btn-light">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services" id="services">
+        <h3>Our Services</h3>
+        <p>We provide practical tools and personalized advice to help you make environmentally conscious choices every day.</p>
+        <div class="service-cards">
+            <div class="card">
+                <h4>Carbon Footprint Tracker</h4>
+                <p>→ Track user’s lifestyle habits (transport, food, energy, shopping) to estimate CO₂ emissions.</p>
+                <p>→ Daily/weekly/monthly reports and tips for reduction.</p>
+            </div>
+            <div class="card">
+                <h4>Sustainable Product Finder</h4>
+                <p>→ Suggest eco-friendly alternatives (clothing, food, cleaning products).</p>
+                <p>→ Partner with ethical brands and marketplaces.</p>
+            </div>
+            <div class="card">
+                <h4>Zero Waste Planning</h4>
+                <p>→ Daily tips on reducing plastic and waste.</p>
+                <p>→ Local recycling and composting guides.</p>
+            </div>
+            <div class="card">
+                <h4>Eco Challenge Hub</h4>
+                <p>→ 30-day lifestyle challenges (plastic-free, vegan, public transport only, etc.).</p>
+                <p>→ Community leaderboard and progress tracker.</p>
+            </div>
+            <div class="card">
+                <h4>Local Sustainability Map</h4>
+                <p>→ Find nearby farmers markets, refill stations, recycling centers, and eco-stores.</p>
+            </div>
+            <div class="card">
+                <h4>Green Habit Builder</h4>
+                <p>→ Personalized habit suggestions based on user goals.</p>
+                <p>→ Daily reminders and motivational nudges.</p>
+            </div>
+            <div class="card">
+                <h4>Energy Usage Optimization</h4>
+                <p>→ Home energy-saving recommendations.</p>
+                <p>→ Smart device integration (e.g. thermostats, energy meters)</p>
+            </div>
+            <div class="card">
+                <h4>Community & Events</h4>
+                <p>→ Local eco-events, volunteer opportunities, workshops.</p>
+            </div>
+            <div class="card">
+                <h4>Personal Sustainability Score</h4>
+                <p>→ Gamified score reflecting lifestyle impact.</p>
+                <p>→ Compare over time or with community averages.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero">
+        <img src="static/images/leaves2.png" alt="Plant Growing">
+        <div class="hero-text">
+            <h2>Together for a Safer, More Sustainable Future</h2>
+            <p>Together for a Safer, More Sustainable Future, we unite communities, innovation, and action to protect the planet and ensure well-being for generations to come.</p>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Be part of Sustainbly’s mission to foster sustainable living through guided waste management, carbon footprint tracking, and eco-friendly products.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <nav>
+            <a href="index.html">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            </nav>
+        </div>
+        <div class="footer-section">
+            <h4>Get in Touch</h4>
+            <nav>
+            <a href="mailto:the.sustainbly@gmail.com">Email: the.sustainbly@gmail.com</a>
+            <a href="https://www.instagram.com/sustainbly_" target="_blank" rel="noopener noreferrer">Instagram: @sustainbly_</a>
+            <a href="https://www.linkedin.com/company/sustainbly" target="_blank" rel="noopener noreferrer">LinkedIn: @Sustainbly</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
