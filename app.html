@@ -11,11 +11,13 @@
       box-sizing: border-box;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
+
     body {
       background-color: #f2f6f0;
       color: #1f3a2c;
       line-height: 1.6;
     }
+
     header {
       background-color: #1f3a2c;
       padding: 1.5rem;
@@ -23,16 +25,25 @@
       justify-content: space-between;
       align-items: center;
       color: white;
+      flex-wrap: wrap;
     }
+
     header h1 {
       font-size: 1.8rem;
     }
+
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 1rem;
       font-weight: 600;
     }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
     .hero {
       display: flex;
       flex-wrap: wrap;
@@ -41,149 +52,152 @@
       align-items: center;
       justify-content: space-between;
     }
+
     .hero-text {
       max-width: 45%;
     }
+
     .hero-text h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
+
     .hero-text p {
       margin-bottom: 1.5rem;
     }
+
     .hero img {
       max-width: 45%;
       border-radius: 10px;
     }
+
     .home {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding: 3rem 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color: #f0f6ea;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #f0f6ea;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 
-.home img {
-  flex: 1 1 300px;
-  max-width: 400px;
-  width: 100%;
-  border-radius: 15px;
-  object-fit: cover;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
+    .home img {
+      flex: 1 1 300px;
+      max-width: 400px;
+      width: 100%;
+      border-radius: 15px;
+      object-fit: cover;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
 
-.home .hero-text {
-  flex: 1 1 350px;
-  max-width: 550px;
-  color: #2e4a1f;
-}
+    .home .hero-text {
+      flex: 1 1 350px;
+      max-width: 550px;
+      color: #2e4a1f;
+    }
 
-.home .hero-text h2 {
-  font-size: 2.25rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
+    .home .hero-text h2 {
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
 
-.home .hero-text p {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: #49662b;
-}
+    .home .hero-text p {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: #49662b;
+    }
 
     @media (max-width: 1024px) {
-  .hero-text, 
-  .hero img {
-    max-width: 100%;
-    flex: 1 1 100%;
-  }
+      .hero, .home {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+      }
 
-  .hero {
-    padding: 2rem;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .home {
-    flex-direction: column;
-    padding: 2.5rem 1.5rem;
-  }
+      .hero-text, .hero img,
+      .home .hero-text, .home img {
+        max-width: 100%;
+        flex: 1 1 100%;
+      }
 
-  .home img,
-  .home .hero-text {
-    max-width: 100%;
-  }
+      .home .hero-text h2 {
+        font-size: 2rem;
+      }
 
-  .home .hero-text h2 {
-    font-size: 2rem;
-  }
+      .home .hero-text p {
+        font-size: 1.1rem;
+      }
+    }
 
-  .home .hero-text p {
-    font-size: 1.1rem;
-  }
-}
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
 
-  header h1 {
-    font-size: 1.4rem;
-  }
+      header h1 {
+        font-size: 1.4rem;
+      }
 
-  nav a {
-    margin: 0 0.5rem 0 0;
-    font-size: 0.9rem;
-  }
+      nav a {
+        margin: 0 0.5rem 0 0;
+        font-size: 0.9rem;
+      }
 
-  .hero-text h2 {
-    font-size: 1.8rem;
-  }
+      .hero-text h2 {
+        font-size: 1.8rem;
+      }
 
-  .hero-text p {
-    font-size: 1rem;
-  }
-  .home {
-    padding: 2rem 1rem;
-  }
+      .hero-text p {
+        font-size: 1rem;
+      }
 
-  .home .hero-text h2 {
-    font-size: 1.5rem;
-  }
+      .home {
+        padding: 2rem 1rem;
+      }
 
-  .home .hero-text p {
-    font-size: 1rem;
-  }
-}
+      .home .hero-text h2 {
+        font-size: 1.5rem;
+      }
+
+      .home .hero-text p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Sustainbly</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="index.html#services">Services</a>
       <a href="index.html#contact">Contact</a>
-      <a herf="#hero">Start Your Journey</a>
+      <a href="#hero">Start Your Journey</a>
     </nav>
   </header>
+
   <section class="hero" id="hero">
     <div class="hero-text">
       <h2>Start Your Journey</h2>
       <p>Explore how Sustainbly 🌿 helps you embrace a greener lifestyle every day. From monitoring your carbon footprint to accessing practical eco-friendly tips, this guided tour highlights the app’s core features—personalized insights, interactive dashboards, and community challenges. Whether you're beginning your sustainability journey or aiming to take it further, discover how each part of the app empowers you to live more sustainably.</p>
     </div>
+    <img src="https://plus.unsplash.com/premium_photo-1664283661240-f2401675c6b9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIxMnw2c01WalRMU2tlUXx8ZW58MHx8fHx8" alt="Plant Growing">
   </section>
+
   <section class="home" id="home">
-    <img src="images/home.png" alt="home"/>
+    <img src="./images/home.png" alt="home" />
     <div class="hero-text">
       <h2>Our Home Page</h2>
       <p>Welcome to Sustainbly’s Home Page — your gateway to easy, everyday eco-friendly living. Quickly access your carbon footprint tracker, explore daily green tips, join community challenges, and discover tools designed to help you reduce your environmental impact. Start your journey toward a more sustainable lifestyle right here.</p>
     </div>
   </section>
+
 </body>
 </html>
