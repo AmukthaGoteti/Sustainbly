@@ -194,6 +194,46 @@
     border-radius: 1rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
+
+    .explore {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.explore .hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.explore h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.explore p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.explore img {
+  flex: 1;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
     /* Base styles (your existing styles) */
 
 /* Responsive styles */
@@ -235,6 +275,30 @@
 
   .forest-section {
     padding: 3rem 1rem;
+  }
+
+  .explore {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 16px;
+  }
+
+  .explore .hero-text {
+    order: 2;
+  }
+
+  .explore img {
+    order: 1;
+    max-width: 90%;
+    margin-bottom: 24px;
+  }
+
+  .explore h2 {
+    font-size: 2rem;
+  }
+
+  .explore p {
+    font-size: 1rem;
   }
 }
 
@@ -290,6 +354,23 @@
 
   .cta {
     padding: 2rem 1rem;
+  }
+
+  .explore {
+    padding: 20px 12px;
+  }
+
+  .explore h2 {
+    font-size: 1.6rem;
+  }
+
+  .explore p {
+    font-size: 0.95rem;
+  }
+
+  .explore img {
+    max-width: 100%;
+    margin-bottom: 20px;
   }
 }
 
